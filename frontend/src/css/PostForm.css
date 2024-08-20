@@ -1,0 +1,120 @@
+.post-form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  a{
+    text-decoration: none;
+    color:black;
+  }
+  .post-form-container h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .post-form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .post-form-container input,
+  .post-form-container textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    width: calc(100% - 22px);
+  }
+  
+  .post-form-container input[type="file"] {
+    padding: 3px;
+  }
+  
+  .post-form-container textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  
+  .post-form-container button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .post-form-container button:hover {
+    background-color: #218838;
+  }
+  
+  .post-form-container .error {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #e74c3c;
+    border-radius: 4px;
+    background-color: #f2dede;
+    color: #a94442;
+    text-align: center;
+  }
+  
+  .image-preview {
+    margin-top: 15px;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  .post-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .show-form-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .show-form-button h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .show-form-button button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .show-form-button button:hover {
+    background-color: #0056b3;
+  }
+  .post-description{
+    color:rgb(65, 64, 64)
+  }
+  
+  

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;700&display=swap');
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.nav-logo{
+    color:orangered;
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Prompt', sans-serif;
+   
+}
+.nav-menu{
+    display:flex;
+    gap:20px;
+    list-style: none;
+    padding:0; 
+    color:gray
+}
+
+.sign-out-button{
+    background-color: white;
+    padding:10px;
+    border-radius: 20px;
+    border: 2px solid rgb(5, 57, 93)
+}
+.sign-out-button:hover{
+   background-color: rgb(5, 57, 93);
+   color:white;
+}
+.search-button{
+    font-size: 24px;
+    align-self: center;
+    color:rgb(5, 57, 93);
+    margin-right:5px
+}
+.navbar-right{
+    display:flex;
+    align-items: center;
+}
+.username{
+    margin-right:5px;
+}

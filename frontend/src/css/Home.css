@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;700&display=swap');
+
+*{
+    font-family: 'Prompt', sans-serif;
+}
+img{
+    height:200px;
+    width:200px;
+}
+.home-banner{
+    /* height: 500px; */
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+.posts-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+    gap: 20px;
+    /* padding: 16px; */
+    margin-top: 40px;
+}

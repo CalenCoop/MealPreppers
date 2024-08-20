@@ -1,0 +1,106 @@
+
+.specific-post-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.specific-post-image {
+    width: 100%;
+    height: auto;
+    /* max-height: 450px; */
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.specific-post-content {
+    padding: 20px;
+}
+
+.specific-post-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.specific-post-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: #888;
+}
+
+.specific-post-comment {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.specific-post-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em;
+    color: #666;
+}
+
+.specific-post-detail {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.specific-post-detail span {
+    font-weight: bold;
+    color: #333;
+}
+
+.left-spost-stats{
+    display:flex;
+    align-items: center;
+    gap:25px;
+}
+.sp-likes{
+    display: flex;
+    align-items: center;
+}
+.sp-likes span{
+    margin-left: 5px;
+
+}
+.like-button{
+    background-color: white;
+    border-radius:3px;
+    border: 1px solid orangered;
+}
+.button-container{
+    display: flex;
+    justify-content: flex-end;
+}
+.delete-button{
+    margin-right:10px;
+}
+.delete-button, .edit-button {
+    background-color: white;
+    color: #ff4d4d;
+    border: 2px solid #ff4d4d; 
+    border-radius: 5px; 
+    padding: 8px 12px; 
+    font-size: 14px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+.delete-button:hover, .edit-button:hover {
+    background-color: #e60000; 
+    color: white;
+}
+.delete-button:active, .edit-button:active {
+    background-color: #970404; 
+    color: white;
+}
