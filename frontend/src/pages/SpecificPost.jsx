@@ -5,6 +5,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 import { IoChevronDownCircle, IoThumbsUpOutline } from "react-icons/io5";
 import { IoThumbsUpSharp } from "react-icons/io5";
+import DOMPurify from 'dompurify';
 import '../css/SpecificPost.css';
 
 export default function SpecificPost(){
@@ -85,7 +86,7 @@ export default function SpecificPost(){
                         <h1 className="specific-post-title">{post.title}</h1>
                         <div className="specific-post-meta">
                             <div className="left-spost-stats">
-                                <Link to ={`/profile/${post.user}`}><span>by {post.userName}</span></Link>
+                                <Link to ={`/profile/${post.user}`}><span>by <span className='username-span'> {post.userName}</span></span></Link>
                                 <div className="sp-likes">
                                     <button className='like-button' onClick={handleLike}>
                                         {isLiked ? 
@@ -97,7 +98,7 @@ export default function SpecificPost(){
                             </div>
                             <span>{new Date(post.createdAt).toLocaleDateString()}</span>
                         </div>
-                        <p className="specific-post-comment">{post.comment}</p>
+                        <div className="specific-post-comment" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.comment) }}></div>
                         <div className="specific-post-details">
                             <div className="specific-post-detail">
                                 <span>Estimated Cost:</span> ${post.estimatedCost}

@@ -1,4 +1,6 @@
 import React from 'react'
+import ReactQuill from 'react-quill'
+import 'react-quill/dist/quill.snow.css';
 import '../css/PostForm.css';
 
 export default function PostForm(){
@@ -78,19 +80,22 @@ function handleFileChange(e){
                     value={title}
                     />
 
-                    <textarea
-                    name="comment" 
-                    id="comment" 
-                    placeholder='Tell us about your meal (ingredients, directions, etc.)' 
-                    onChange={(e) => setComment(e.target.value)}
+
+                    <ReactQuill 
+                    theme='snow'
                     value={comment}
-                    />
-                    <input type= "file"
-                    name="file" 
-                    id="file" 
-                    onChange={handleFileChange}
-                    />
-                    {preview && <img src={preview} alt="Image Preview" className="image-preview" />}
+                    onChange={setComment}
+                    placeholder='Tell us about your meal (ingredients, directions, etc.)'
+                    className="rich-text-editor"
+                    /> 
+                    <div className="file-input-container">
+                        <input type= "file"
+                        name="file" 
+                        id="file" 
+                        onChange={handleFileChange}
+                        />
+                        {preview && <img src={preview} alt="Image Preview" className="image-preview" />}
+                    </div>
 
                     <input
                     type= "number"

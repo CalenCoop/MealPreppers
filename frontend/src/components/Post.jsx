@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { IoThumbsUpOutline } from "react-icons/io5";
 import { IoThumbsUpSharp } from "react-icons/io5";
+import DOMPurify from 'dompurify';
 import '../css/Post.css';
 
 
@@ -17,7 +18,10 @@ export default function Post({ post }){
         setIsLiked(post.likedBy.includes(user._id))
     },[post, user])
 
-    const description = `${post.comment.slice(0,50)}...`
+    // const description = `${post.comment.slice(0,50)}...`
+    
+    
+    const description = `${stripHtmlTagsAndDecode(post.comment).slice(0, 50)}...`;
 
     async function handleLike(e){
         e.preventDefault()
@@ -43,6 +47,17 @@ export default function Post({ post }){
             console.log(error)
         }
     }
+
+    function stripHtmlTagsAndDecode(htmlString) {
+        const strippedString = htmlString.replace(/<\/?[^>]+(>|$)/g, "");
+        
+        const parser = new DOMParser();
+        const decodedString = parser.parseFromString(strippedString, 'text/html').body.textContent || "";
+        
+        return decodedString;
+    }
+
+    
 
     return (
         <Link to={`/post/${post._id}`} className="post-link">

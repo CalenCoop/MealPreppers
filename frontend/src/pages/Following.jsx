@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import Post from '../components/Post'
+import '../css/Following.css';
 
 export default function Following(){
     const [posts, setPosts]= React.useState([])
@@ -30,9 +31,13 @@ export default function Following(){
 
     return (
         <div className="following-container">
-        
-            <h1>Following page</h1>
-            {postElements}
+            <h1>Following</h1>
+            <div className="posts-container">
+                {postElements}
+            </div>
+            <div className="more-posts">
+                <p><a href="/home">Explore More Recipes</a></p>
+            </div>
         </div>
             
     )

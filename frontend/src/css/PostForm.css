@@ -116,5 +116,41 @@
   .post-description{
     color:rgb(65, 64, 64)
   }
+
+  .rich-text-editor {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 100px; 
+}
+
+.ql-container {
+    border-radius: 4px;
+}
+
+.post-form-container input[type="text"],
+.post-form-container input[type="number"],
+.post-form-container input[type="file"],
+.post-form-container button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.image-preview {
+    margin-top: 15px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+
+}
+.file-input-container {
+  margin-top: 55px;
+  /* margin-bottom: 10px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
   
   

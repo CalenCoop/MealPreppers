@@ -74,3 +74,9 @@
   .follow-button:hover {
     background-color: #0056b3;
   }
+  .profile-posts-form{
+    margin-top:50px;
+    /* display: flex;
+    width:100%;
+    justify-content: center; */
+  }

@@ -8,6 +8,7 @@ import ProfilePicUpload from '../components/ProfilePic';
 import getCurrentUser from '../../utils/GetCurrentUser';
 import '../css/Profile.css';
 import '../css/ProfilePicButton.css';
+import PostForm from '../components/PostForm';
 
 
 
@@ -79,6 +80,9 @@ const user = getCurrentUser()
         </div>
         <div className="profile-posts-container">
           {profilePosts}
+        </div>
+        <div className="profile-posts-form">
+          <PostForm />
         </div>
       </div>
     );

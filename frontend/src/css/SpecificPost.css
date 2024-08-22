@@ -76,7 +76,7 @@
 .like-button{
     background-color: white;
     border-radius:3px;
-    border: 1px solid orangered;
+    border: 1px solid #FE4500;
 }
 .button-container{
     display: flex;
@@ -87,7 +87,7 @@
 }
 .delete-button, .edit-button {
     background-color: white;
-    color: #ff4d4d;
+    color: #FE4500;
     border: 2px solid #ff4d4d; 
     border-radius: 5px; 
     padding: 8px 12px; 
@@ -103,4 +103,7 @@
 .delete-button:active, .edit-button:active {
     background-color: #970404; 
     color: white;
+}
+.username-span{
+    color:#FE4500;
 }
