@@ -30,7 +30,7 @@ const user = getCurrentUser()
             setLoading(false)
         }
         fetchPosts()
-    },[])
+    },[posts])
    
     const postElements = Array.isArray(posts) && posts.map((post) => (
     <Post 
