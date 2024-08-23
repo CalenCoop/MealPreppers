@@ -65,6 +65,6 @@ app.use("/", mainRoutes);
 app.use("/post", postRoutes);
 
 // Server Running
-app.listen(process.env.PORT || 2501 , () => {
+app.listen(process.env.PORT || 2500 , () => {
     console.log("Server is running on http://localhost:2501/");
 });
