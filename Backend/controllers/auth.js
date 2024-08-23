@@ -1,7 +1,7 @@
 const passport = require("passport");
 const validator = require("validator");
 const User = require("../models/User");
-const bcrypt = require("bcrypt")
+const bcrypt = require("bcryptjs")
 const {createError} = require('../middleware/error');
 const jwt = require('jsonwebtoken')
 
