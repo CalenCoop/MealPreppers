@@ -102,4 +102,3 @@ frontend
     ```
 
 5. **Open in Browser**: Open your web browser and go to [http://localhost:3000](http://localhost:3000) to view the website.
-# MealPreppers-hosted

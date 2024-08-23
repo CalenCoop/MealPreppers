@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const passport = require("passport");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const methodOverride = require("method-override");
@@ -58,10 +57,6 @@ app.use(
 );
 
 
-// Passport middleware
-app.use(passport.initialize());
-app.use(passport.session());
-
 // Use flash messages for errors, info, etc.
 app.use(flash());
 
@@ -70,6 +65,6 @@ app.use("/", mainRoutes);
 app.use("/post", postRoutes);
 
 // Server Running
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 2501 , () => {
     console.log("Server is running on http://localhost:2501/");
 });
