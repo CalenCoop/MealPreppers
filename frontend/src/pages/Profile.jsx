@@ -22,11 +22,11 @@ const user = getCurrentUser()
     React.useEffect(()=>{
         const fetchProfile = async() => {
             try{
-                const response = await axios.get(`http://localhost:2501/profile/${id}`)
+                const response = await axios.get(`https://mealpreppers.onrender.com/profile/${id}`)
                 setPosts(response.data.posts)
                 setProfile(response.data.profile)
 
-                const followStatus = await axios.get(`http://localhost:2501/followStatus/${id}`,{
+                const followStatus = await axios.get(`https://mealpreppers.onrender.com/followStatus/${id}`,{
                     withCredentials: true,
                 })
                 setIsFollowing(followStatus.data.isFollowing)
@@ -40,7 +40,7 @@ const user = getCurrentUser()
 
     function handleFollow(){
         try{
-            const response = axios.post(`http://localhost:2501/followUser/${profile._id}`,{},{
+            const response = axios.post(`https://mealpreppers.onrender.com/followUser/${profile._id}`,{},{
                 withCredentials: true,
             })
             setIsFollowing(!isFollowing)

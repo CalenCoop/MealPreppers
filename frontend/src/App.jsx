@@ -9,9 +9,11 @@ import SpecificPost from './pages/SpecificPost'
 import Profile from './pages/Profile'
 import Following from './pages/Following'
 import EditPost from './pages/EditPost'
+import getCurrentUser from '../utils/GetCurrentUser'
 import './css/App.css';
 
 function App() {
+  const user = getCurrentUser()
 
   return (
     <div className="app-container">
@@ -19,6 +21,7 @@ function App() {
 
     <Navbar />
      <Routes> 
+      <Route path ='/' element={ user ? <Home /> : <Login /> }/>
       <Route path ='/home' element={<Home />}/>
       <Route path ='/login' element={<Login /> }></Route>
       <Route path ='/signup' element={<SignUp /> }></Route>

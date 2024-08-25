@@ -8,7 +8,7 @@ import DOMPurify from 'dompurify';
 import '../css/Post.css';
 
 
-export default function Post({ post }){
+export default function Post({ post, refetchPosts }){
     const [likes, setLikes] = React.useState(post.likes || 0)
     const [isLiked, setIsLiked] = React.useState(null)
     const user = getCurrentUser()
@@ -26,7 +26,7 @@ export default function Post({ post }){
     async function handleLike(e){
         e.preventDefault()
         try{
-            const response = await axios.put(`http://localhost:2501/post/likePost/${post._id}`, {}, 
+            const response = await axios.put(`https://mealpreppers.onrender.com/post/likePost/${post._id}`, {}, 
             { withCredentials: true });
             setLikes(response.data.likes)
             setIsLiked(response.data.likedBy.includes(user._id))
@@ -39,9 +39,10 @@ export default function Post({ post }){
        e.preventDefault()
         try{
             if(post.user === user._id){
-            const response = await axios.delete(`http://localhost:2501/post/deletePost/${post._id}`,
+            const response = await axios.delete(`https://mealpreppers.onrender.com/post/deletePost/${post._id}`,
                 { withCredentials: true })
                 console.log(response)
+                refetchPosts()
             }
         }catch(error){
             console.log(error)

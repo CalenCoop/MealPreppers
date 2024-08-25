@@ -3,7 +3,7 @@ import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css';
 import '../css/PostForm.css';
 
-export default function PostForm(){
+export default function PostForm(props){
 const [title, setTitle] = React.useState('') 
 const [comment, setComment] = React.useState('')
 const [estimatedTime, setEstimatedTime] = React.useState('') 
@@ -25,7 +25,7 @@ async function handleSubmit(e){
 
     const token = localStorage.getItem('access_token')
 
-    const response = await fetch("http://localhost:2501/post/createPost/", {
+    const response = await fetch("https://mealpreppers.onrender.com/post/createPost/", {
         method: "POST",
         body: formData,
         headers: {
@@ -44,7 +44,8 @@ async function handleSubmit(e){
       setPreview(null);
       setError(null);
       setShowForm(false)
-      console.log('new post added', data);
+      //refetch posts
+      props.refetchPosts()
     }else{
         setError(data.error)
         console.log(error)

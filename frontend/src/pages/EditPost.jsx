@@ -35,7 +35,7 @@ export default function EditPost() {
 
         const token = localStorage.getItem('access_token');
 
-        const response = await fetch(`http://localhost:2501/post/editPost/${post._id}`, {
+        const response = await fetch(`https://mealpreppers.onrender.com/post/editPost/${post._id}`, {
             method: "PUT",
             body: formData,
             headers: {

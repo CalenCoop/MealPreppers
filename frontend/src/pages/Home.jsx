@@ -19,7 +19,7 @@ const user = getCurrentUser()
         setLoading(true)
         const fetchPosts = async() => {
             try{
-                const response = await axios.get("http://localhost:2501/home",{
+                const response = await axios.get("https://mealpreppers.onrender.com/home",{
                     withCredentials: true,
                 })
                 setPosts(response.data)
@@ -30,12 +30,26 @@ const user = getCurrentUser()
             setLoading(false)
         }
         fetchPosts()
-    },[posts])
+    },[])
+    async function refetchPosts(){
+        setLoading(true)
+        try{
+            const response = await axios.get("http://localhost:2503/home",{
+                withCredentials: true,
+            })
+            setPosts(response.data)
+
+        }catch(err){
+            console.log(err)
+        }
+        setLoading(false)
+    }
    
     const postElements = Array.isArray(posts) && posts.map((post) => (
     <Post 
     key = {post._id}
     post = {post}
+    refetchPosts={refetchPosts}
     /> 
 ))
     return (
@@ -43,7 +57,7 @@ const user = getCurrentUser()
             <img src={foodPhoto} alt="photo of food" className='home-banner'/>
             <h2>Explore Recipes</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam eveniet in temporibus distinctio eius deserunt recusandae earum voluptatum, quos minus quaerat ad, et praesentium quasi culpa, sequi vero nobis suscipit?</p>
-            <PostForm />
+            <PostForm refetchPosts={refetchPosts} />
             <div className="posts-container">
             {postElements}
             </div>
