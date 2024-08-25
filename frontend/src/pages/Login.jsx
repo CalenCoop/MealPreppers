@@ -13,7 +13,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try{
-      const response = await newRequest.post("http://localhost:2501/login",{username, password})
+      const response = await newRequest.post("https://mealpreppers.onrender.com/login",{username, password})
       localStorage.setItem('currentUser', JSON.stringify(response.data))
       navigate('/home')
     }catch(err){
@@ -50,6 +50,7 @@ export default function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
+          <span> Dont have an account? Click <a href="/signup">here</a></span>
           <button type="submit">Login</button>
         </form>
         {message && <p>{message}</p>}
