@@ -34,7 +34,7 @@ const user = getCurrentUser()
     async function refetchPosts(){
         setLoading(true)
         try{
-            const response = await axios.get("http://localhost:2503/home",{
+            const response = await axios.get("https://mealpreppers.onrender.com/home",{
                 withCredentials: true,
             })
             setPosts(response.data)

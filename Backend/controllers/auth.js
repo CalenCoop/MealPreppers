@@ -23,10 +23,12 @@ exports.register = async(req, res, next)=> {
 
     const { password, ...info } = savedUser._doc
 
-    res
+   res
     .cookie('access_token', token,{
       httpOnly: true,
-      path: '/' //if cookies dont work check this
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax', 
+      path: '/' 
     })
     .status(200)
     .json({...info})
@@ -54,6 +56,8 @@ exports.login = async(req, res, next)=> {
     res
     .cookie('access_token', token,{
       httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax', 
       path: '/' 
     })
     .status(200)

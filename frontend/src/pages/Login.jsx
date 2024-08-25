@@ -16,6 +16,7 @@ export default function Login() {
       const response = await newRequest.post("https://mealpreppers.onrender.com/login",{username, password})
       localStorage.setItem('currentUser', JSON.stringify(response.data))
       navigate('/home')
+      console.log(document.cookie)
     }catch(err){
       if (err.response) {
         setMessage(err.response.data.message);
