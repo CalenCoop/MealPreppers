@@ -35,7 +35,7 @@ app.use(cookieParser())
 
 //cors
 const corsOptions = {
-  origin: ['https://66cba75e0c815f7d3787944a--mealpreps.netlify.app/','https://mealpreps.netlify.app/', 'http://localhost:3006'], 
+  origin: ['https://66cba75e0c815f7d3787944a--mealpreps.netlify.app','https://mealpreps.netlify.app', 'http://localhost:3006'], 
   methods:"GET,POST,PUT,DELETE", 
   credentials: true, 
 };
