@@ -55,7 +55,7 @@ exports.login = async(req, res, next)=> {
     .cookie('access_token', token,{
       httpOnly: true,
       secure: true,
-      sameSite: none,
+      sameSite: None,
       path: '/'
     })
     .status(200)
