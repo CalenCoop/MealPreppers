@@ -26,7 +26,9 @@ exports.register = async(req, res, next)=> {
     res
     .cookie('access_token', token,{
       httpOnly: true,
-      path: '/' //if cookies dont work check this
+      secure: true,
+      sameSite: 'None',
+      path: '/'
     })
     .status(200)
     .json({...info})
