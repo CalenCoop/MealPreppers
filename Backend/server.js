@@ -35,8 +35,8 @@ app.use(cookieParser())
 
 //cors
 const corsOptions = {
-  origin: ['https://66cba75e0c815f7d3787944a--mealpreps.netlify.app','https://mealpreps.netlify.app', 'http://localhost:3006'], 
-  methods:"GET,POST,PUT,DELETE", 
+  origin: [/^https:\/\/.*\.netlify\.app$/, 'http://localhost:3006'], 
+  methods: "GET,POST,PUT,DELETE", 
   credentials: true, 
 };
 
@@ -66,5 +66,5 @@ app.use("/post", postRoutes);
 
 // Server Running
 app.listen(process.env.PORT || 2500 , () => {
-    console.log("Server is running on https://mealpreppers.onrender.com/");
+    console.log("Server is running on https://66ce9f7d0d24d7e3187befc6--mealpreps.netlify.app/");
 });
