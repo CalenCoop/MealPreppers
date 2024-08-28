@@ -19,7 +19,6 @@ export default function SignupForm() {
         })
     }
 
-    console.log(user, 'confirm', confirmPassword)
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (user.password !== confirmPassword) {

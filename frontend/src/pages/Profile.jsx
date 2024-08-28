@@ -44,7 +44,6 @@ const user = getCurrentUser()
                 withCredentials: true,
             })
             setIsFollowing(!isFollowing)
-            console.log(response.data.message)
         }catch(error){
             console.log(error)
         }

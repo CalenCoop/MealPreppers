@@ -30,6 +30,7 @@ export default function Post({ post, refetchPosts }){
             { withCredentials: true });
             setLikes(response.data.likes)
             setIsLiked(response.data.likedBy.includes(user._id))
+            refetchPosts()
         }catch(error){
             console.log(error)
         }
@@ -41,7 +42,6 @@ export default function Post({ post, refetchPosts }){
             if(post.user === user._id){
             const response = await axios.delete(`https://mealpreppers.onrender.com/post/deletePost/${post._id}`,
                 { withCredentials: true })
-                console.log(response)
                 refetchPosts()
             }
         }catch(error){

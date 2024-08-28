@@ -16,7 +16,6 @@ export default function Login() {
       const response = await newRequest.post("https://mealpreppers.onrender.com/login",{username, password})
       localStorage.setItem('currentUser', JSON.stringify(response.data))
       navigate('/home')
-      console.log(document.cookie)
     }catch(err){
       if (err.response) {
         setMessage(err.response.data.message);
@@ -51,7 +50,7 @@ export default function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <span> Dont have an account? Click <a href="/signup">here</a></span>
+          <span><a href="/signup"> Dont have an account? Click here</a></span>
           <button type="submit">Login</button>
         </form>
         {message && <p>{message}</p>}

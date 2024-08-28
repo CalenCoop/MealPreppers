@@ -52,7 +52,6 @@ export default function SpecificPost(){
              if(post.user === user._id){
              const response = await axios.delete(`https://mealpreppers.onrender.com/post/deletePost/${post._id}`,
                  { withCredentials: true })
-                 console.log(response)
              }
          }catch(error){
              console.log(error)

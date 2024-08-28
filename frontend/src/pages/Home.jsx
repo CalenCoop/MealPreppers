@@ -31,6 +31,7 @@ const user = getCurrentUser()
         }
         fetchPosts()
     },[])
+    
     async function refetchPosts(){
         setLoading(true)
         try{
