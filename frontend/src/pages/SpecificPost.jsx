@@ -35,7 +35,7 @@ export default function SpecificPost(){
         }
     },[post, user])
 
-    const handleLike = async(e) => {
+    async function handleLike(e){
         try{
             const response = await axios.put(`https://mealpreppers.onrender.com/post/likePost/${post._id}`, {}, 
             { withCredentials: true });

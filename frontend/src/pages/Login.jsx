@@ -11,7 +11,7 @@ export default function Login() {
   const [loading, setLoading] = React.useState(false)
   const navigate = useNavigate()
 
-  const handleSubmit = async (e) => {
+  async function handleSubmit (e){
     e.preventDefault();
     setLoading(false)
     try{
@@ -19,10 +19,12 @@ export default function Login() {
       const response = await newRequest.post("https://mealpreppers.onrender.com/login",{username, password})
       localStorage.setItem('currentUser', JSON.stringify(response.data))
       navigate('/home')
+      window.location.reload()
     }catch(err){
       setLoading(false)
       if (err.response) {
         setMessage(err.response.data.message);
+        console.log(message)
       } else {
         setMessage(err.message);
       }
