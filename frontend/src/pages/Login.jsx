@@ -5,18 +5,22 @@ import newRequest from '../../utils/newRequest';
 import '../css/Login.css';
 
 export default function Login() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [message, setMessage] = useState('');
+  const [username, setUsername] = React.useState('');
+  const [password, setPassword] = React.useState('');
+  const [message, setMessage] = React.useState('');
+  const [loading, setLoading] = React.useState(false)
   const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(false)
     try{
+      setLoading(true)
       const response = await newRequest.post("https://mealpreppers.onrender.com/login",{username, password})
       localStorage.setItem('currentUser', JSON.stringify(response.data))
       navigate('/home')
     }catch(err){
+      setLoading(false)
       if (err.response) {
         setMessage(err.response.data.message);
       } else {
@@ -50,6 +54,7 @@ export default function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
+          {loading && <p> Loading... </p>}
           <span><a href="/signup"> Dont have an account? Click here</a></span>
           <button type="submit">Login</button>
         </form>
