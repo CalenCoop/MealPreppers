@@ -57,7 +57,7 @@
 .like-button{
         background-color: white;
         border-radius:3px;
-        border: 1px solid orangered;
+        border: 1px solid  #ff4d4d;
     }
     .like-button:hover{
         background-color: rgb(234, 229, 229);

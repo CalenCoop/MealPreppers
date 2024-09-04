@@ -21,9 +21,9 @@ function App() {
 
     <Navbar />
      <Routes> 
-      <Route path ='/' element={ user ? <Home /> : <Login /> }/>
-      <Route path ='/home' element={<Home />}/>
-      <Route path ='/login' element={<Login /> }></Route>
+      <Route path ='/' element={ user ? <Home /> : <Login />}/>
+      <Route path ='/home' element={ user ? <Home /> : <Login />}/>
+      <Route path ='/login' element={ user ? <Home /> : <Login />}/>
       <Route path ='/signup' element={<SignUp /> }></Route>
       <Route path ='/logout' element={<LogOut /> }></Route>
       <Route path ='/post/:id' element={<SpecificPost /> }></Route>

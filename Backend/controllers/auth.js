@@ -40,13 +40,21 @@ exports.register = async(req, res, next)=> {
 exports.login = async(req, res, next)=> {
   try{
     const user = await User.findOne({userName:req.body.username})
-    if(!user) return next(createError(404,"User not found."))
+    if(!user) {
+      const errorMessage = "User not found."
+      console.log(errorMessage)
+      return res.status(404).json({ message: errorMessage });
+    }
 
       const isPasswordCorrect = await bcrypt.compare(
         req.body.password,
         user.password
       )
-      if(!isPasswordCorrect) return next(createError(400,"Wrong password or Username"))
+      if(!isPasswordCorrect) {
+        const errorMessage = "Wrong Password or Username"
+        console.log(errorMessage)
+        return res.status(400).json({ message: errorMessage  });
+      } 
 
         const token = jwt.sign(
           {id:user._id},

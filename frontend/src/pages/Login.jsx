@@ -57,10 +57,10 @@ export default function Login() {
             />
           </div>
           {loading && <p> Loading... </p>}
+          {message && <p>{message}</p>}
           <span><a href="/signup"> Dont have an account? Click here</a></span>
           <button type="submit">Login</button>
         </form>
-        {message && <p>{message}</p>}
       </div>
     </div>
   );
