@@ -25,7 +25,7 @@ async function handleSubmit(e){
 
     const token = localStorage.getItem('access_token')
 
-    const response = await fetch("https://mealpreppers.onrender.com/post/createPost/", {
+    const response = await fetch("http://localhost:2501/post/createPost/", {
         method: "POST",
         body: formData,
         headers: {

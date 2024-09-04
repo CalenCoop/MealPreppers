@@ -19,7 +19,7 @@ export default function SpecificPost(){
     React.useEffect(()=>{
         const fetchPost = async() => {
             try{
-                const response = await axios.get(`https://mealpreppers.onrender.com/post/${id}`)
+                const response = await axios.get(`http://localhost:2501/post/${id}`)
                 setPost(response.data)
             }catch(err){
                 console.log(err)
@@ -37,7 +37,7 @@ export default function SpecificPost(){
 
     async function handleLike(e){
         try{
-            const response = await axios.put(`https://mealpreppers.onrender.com/post/likePost/${post._id}`, {}, 
+            const response = await axios.put(`http://localhost:2501/post/likePost/${post._id}`, {}, 
             { withCredentials: true });
             setLikes(response.data.likes)
             setIsLiked(response.data.likedBy.includes(user._id))
@@ -50,7 +50,7 @@ export default function SpecificPost(){
         e.preventDefault()
          try{
              if(post.user === user._id){
-             const response = await axios.delete(`https://mealpreppers.onrender.com/post/deletePost/${post._id}`,
+             const response = await axios.delete(`http://localhost:2501/post/deletePost/${post._id}`,
                  { withCredentials: true })
              }
          }catch(error){
