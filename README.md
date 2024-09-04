@@ -96,14 +96,8 @@ To set up this project locally for development or testing, follow these steps:
 
 4. **Run the Development Server**: Run the Development Server: Start the development server to preview the app locally. It will be accessible at http://localhost:3000.
     
-backend - 
-frontend - 
+backend -   npm start
+frontend -  npm run dev
 
-    ```
-   npm start
-
-   npm run dev
-   
-    ```
 
 5. **Open in Browser**: Open your web browser and go to [http://localhost:3006](http://localhost:3006) to view the website.
