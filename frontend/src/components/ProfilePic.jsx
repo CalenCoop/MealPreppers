@@ -38,7 +38,7 @@ export default function ProfilePicUpload(){
         try {
             const token = localStorage.getItem('access_token');
             const userId = user._id;
-            const response = await axios.post(`https://mealpreppers.onrender.com/profilePicture/${userId}`, formData, {
+            const response = await axios.post(`http://localhost:2501/profilePicture/${userId}`, formData, {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                     'Content-Type': 'multipart/form-data',
