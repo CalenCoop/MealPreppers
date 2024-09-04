@@ -35,7 +35,7 @@ app.use(cookieParser())
 
 //cors
 const corsOptions = {
-  origin: [/^https:\/\/.*\.netlify\.app$/, 'http://localhost:3006'], 
+  origin: 'http://localhost:3006',
   methods: "GET,POST,PUT,DELETE", 
   credentials: true, 
 };

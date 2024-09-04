@@ -16,7 +16,7 @@ export default function Login() {
     setLoading(false)
     try{
       setLoading(true)
-      const response = await newRequest.post("https://mealpreppers.onrender.com/login",{username, password})
+      const response = await newRequest.post("http://localhost:2501/login",{username, password})
       localStorage.setItem('currentUser', JSON.stringify(response.data))
       navigate('/home')
       window.location.reload()
