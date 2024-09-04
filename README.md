@@ -1,7 +1,11 @@
 # MealPreppers
 
 ## Demo
-    live demo of app -
+    live demo of app - https://mealpreps.netlify.app/ 
+    
+    Demo app login details:
+        Username: TestApp
+        Password: Testing123
 
 ## Description
 
@@ -54,6 +58,8 @@
 ## Future Improvements
     While the app is functional, there are several areas that could be enhanced:
 
+    -Add sorting functionality of meals (ex - sort by breakfast, lunch, dinner. food types - chicken, vegan, etc.)
+
     - Mobile Optimization: Improve the app's responsiveness for a seamless experience on mobile devices.
 
     - Accessibility: Enhance the app’s accessibility for users with disabilities.
@@ -76,11 +82,11 @@ To set up this project locally for development or testing, follow these steps:
 
 2. **Install Dependencies**: Navigate to the project folder and install the required dependencies using npm for both the frontend & backend:
 
+   ```
     cd backend
         &
     cd frontend
 
-   ```
    npm install
 
    ```
@@ -90,12 +96,13 @@ To set up this project locally for development or testing, follow these steps:
 
 4. **Run the Development Server**: Run the Development Server: Start the development server to preview the app locally. It will be accessible at http://localhost:3000.
     
-backend
+backend - 
     ```
    npm start
    
     ```
-frontend
+frontend - 
+    
     ```
    npm run dev
    

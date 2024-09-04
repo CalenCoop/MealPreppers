@@ -27,12 +27,6 @@ export default function EditPost() {
             formData.append('file', file);
         }
     
-        formData.forEach((value, key) => {
-            console.log('key',key, 'value',value);
-        });
-    
-    
-
         const token = localStorage.getItem('access_token');
 
         const response = await fetch(`https://mealpreppers.onrender.com/post/editPost/${post._id}`, {
@@ -47,7 +41,6 @@ export default function EditPost() {
 
         if (response.ok) {
 
-            console.log('Post edited successfully', data);
             navigate(`/post/${post._id}`)
         } else {
             setError(data.error);

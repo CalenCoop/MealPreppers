@@ -6,8 +6,13 @@ import { Link } from "react-router-dom";
 import '../css/Navbar.css';
 
 export default function Navbar(){
+  const [user,setUser] = React.useState(null)
 
-const user = getCurrentUser()
+  React.useEffect(()=> {
+    const currentUser = getCurrentUser()
+    setUser(currentUser)
+  },[])
+  
 if(!user) return 
  return (
    <header className="navbar-container">

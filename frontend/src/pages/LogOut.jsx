@@ -12,6 +12,7 @@ export default function LogOut(){
         console.log('cookies cleared')
         
         navigate('/login')
+        window.location.reload()
     },[])
 
     return (

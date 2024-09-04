@@ -4,23 +4,22 @@ import axios from 'axios';
 import '../css/SignUp.css';
 
 export default function SignupForm() {
-    const [user, setUser] = useState({
+    const [user, setUser] = React.useState({
         username: "",
         email: "",
         password: "",
     });
 
-    const [confirmPassword, setConfirmPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = React.useState('');
     const navigate = useNavigate()
 
-    const handleChange = (e) => {
+    function handleChange(e){
         setUser((prev) => {
             return { ...prev, [e.target.name]: e.target.value }
         })
     }
 
-    console.log(user, 'confirm', confirmPassword)
-    const handleSubmit = async (e) => {
+    async function handleSubmit(e){
         e.preventDefault();
         if (user.password !== confirmPassword) {
             console.log('passwords do not match')
@@ -31,6 +30,7 @@ export default function SignupForm() {
             if (response.status === 200) {
                 localStorage.setItem('currentUser', JSON.stringify(response.data))
                 navigate('/home');
+                window.location.reload()
             } else {
                 console.error('Registration failed:', response.data.message);
             }

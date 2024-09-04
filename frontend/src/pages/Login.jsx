@@ -5,20 +5,26 @@ import newRequest from '../../utils/newRequest';
 import '../css/Login.css';
 
 export default function Login() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [message, setMessage] = useState('');
+  const [username, setUsername] = React.useState('');
+  const [password, setPassword] = React.useState('');
+  const [message, setMessage] = React.useState('');
+  const [loading, setLoading] = React.useState(false)
   const navigate = useNavigate()
 
-  const handleSubmit = async (e) => {
+  async function handleSubmit (e){
     e.preventDefault();
+    setLoading(false)
     try{
+      setLoading(true)
       const response = await newRequest.post("https://mealpreppers.onrender.com/login",{username, password})
       localStorage.setItem('currentUser', JSON.stringify(response.data))
       navigate('/home')
+      window.location.reload()
     }catch(err){
+      setLoading(false)
       if (err.response) {
         setMessage(err.response.data.message);
+        console.log(message)
       } else {
         setMessage(err.message);
       }
@@ -50,10 +56,11 @@ export default function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <span> Dont have an account? Click <a href="/signup">here</a></span>
+          {loading && <p> Loading... </p>}
+          {message && <p>{message}</p>}
+          <span><a href="/signup"> Dont have an account? Click here</a></span>
           <button type="submit">Login</button>
         </form>
-        {message && <p>{message}</p>}
       </div>
     </div>
   );

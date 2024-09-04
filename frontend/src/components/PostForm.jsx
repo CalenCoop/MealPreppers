@@ -70,53 +70,54 @@ function handleFileChange(e){
             <button onClick={()=> setShowForm(!showForm)}>Add meal</button>
             </div> 
             : 
-            <div className="post-form-container">
-                <form onSubmit={handleSubmit}>
-                    <h3>Add a New Meal</h3>
-                    <input
-                    name="title" 
-                    id="title" 
-                    placeholder='Meal Name' 
-                    onChange={(e) => setTitle(e.target.value)}
-                    value={title}
-                    />
-
-
-                    <ReactQuill 
-                    theme='snow'
-                    value={comment}
-                    onChange={setComment}
-                    placeholder='Tell us about your meal (ingredients, directions, etc.)'
-                    className="rich-text-editor"
-                    /> 
-                    <div className="file-input-container">
-                        <input type= "file"
-                        name="file" 
-                        id="file" 
-                        onChange={handleFileChange}
+            <div className="form-container">
+                <div className="post-form-container">
+                    <form onSubmit={handleSubmit}>
+                        <h3>Add a New Meal</h3>
+                        <input
+                        name="title" 
+                        id="title" 
+                        placeholder='Meal Name' 
+                        onChange={(e) => setTitle(e.target.value)}
+                        value={title}
                         />
-                        {preview && <img src={preview} alt="Image Preview" className="image-preview" />}
-                    </div>
 
-                    <input
-                    type= "number"
-                    name="estimatedTime" 
-                    id="estimatedTime" 
-                    placeholder='Estimated Meal Cooking Time' 
-                    onChange={(e) => setEstimatedTime(e.target.value)}
-                    value={estimatedTime}
-                    />
-                    <input
-                    type= "number"
-                    name="estimatedCost" 
-                    id="estimatedCost" 
-                    placeholder='Estimated Meal Cost' 
-                    onChange={(e) => setEstimatedCost(e.target.value)}
-                    value={estimatedCost}
-                    /> 
-                    <button>Add Meal</button>
-                </form>
-                
+
+                        <ReactQuill 
+                        theme='snow'
+                        value={comment}
+                        onChange={setComment}
+                        placeholder='Tell us about your meal (ingredients, directions, etc.)'
+                        className="rich-text-editor"
+                        /> 
+                        <div className="file-input-container">
+                            <input type= "file"
+                            name="file" 
+                            id="file" 
+                            onChange={handleFileChange}
+                            />
+                            {preview && <img src={preview} alt="Image Preview" className="image-preview" />}
+                        </div>
+
+                        <input
+                        type= "number"
+                        name="estimatedTime" 
+                        id="estimatedTime" 
+                        placeholder='Estimated Meal Cooking Time' 
+                        onChange={(e) => setEstimatedTime(e.target.value)}
+                        value={estimatedTime}
+                        />
+                        <input
+                        type= "number"
+                        name="estimatedCost" 
+                        id="estimatedCost" 
+                        placeholder='Estimated Meal Cost' 
+                        onChange={(e) => setEstimatedCost(e.target.value)}
+                        value={estimatedCost}
+                        /> 
+                        <button>Add Meal</button>
+                    </form>
+                </div>
             </div>
             }
         </>

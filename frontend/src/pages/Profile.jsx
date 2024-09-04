@@ -44,11 +44,20 @@ const user = getCurrentUser()
                 withCredentials: true,
             })
             setIsFollowing(!isFollowing)
-            console.log(response.data.message)
         }catch(error){
             console.log(error)
         }
     }
+    async function refetchPosts(){
+      try{
+          const response = await axios.get(`http://localhost:2503/profile/${id}`)
+          setPosts(response.data.posts)
+          setProfile(response.data.profile)
+      }catch(err){
+          console.log(err)
+      }
+  }
+
 
     const profilePosts = Array.isArray(posts) && posts.map((post) => (
         <Post 
@@ -82,7 +91,7 @@ const user = getCurrentUser()
           {profilePosts}
         </div>
         <div className="profile-posts-form">
-          <PostForm />
+          <PostForm refetchPosts = {refetchPosts}/>
         </div>
       </div>
     );
