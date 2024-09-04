@@ -82,10 +82,10 @@ To set up this project locally for development or testing, follow these steps:
 
 2. **Install Dependencies**: Navigate to the project folder and install the required dependencies using npm for both the frontend & backend:
 
-   ```
     cd backend
         &
     cd frontend
+   ```
 
    npm install
 
@@ -97,15 +97,13 @@ To set up this project locally for development or testing, follow these steps:
 4. **Run the Development Server**: Run the Development Server: Start the development server to preview the app locally. It will be accessible at http://localhost:3000.
     
 backend - 
+frontend - 
+
     ```
    npm start
-   
-    ```
-frontend - 
-    
-    ```
+
    npm run dev
    
     ```
 
-5. **Open in Browser**: Open your web browser and go to [http://localhost:3000](http://localhost:3000) to view the website.
+5. **Open in Browser**: Open your web browser and go to [http://localhost:3006](http://localhost:3006) to view the website.
