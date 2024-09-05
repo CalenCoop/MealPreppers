@@ -67,8 +67,11 @@ export default function ProfilePicUpload(){
                         Choose a file
                     </label>
                     <input id="file-upload" type="file" name="file" onChange={handleFileChange} />
+
                     {preview && <img src={preview} alt="Image Preview" className="image-preview" />}
+
                     <button type="submit">Upload</button>
+
                     <button type="button" onClick={() => setShowForm(false)}>Cancel</button>
                 </form>
             )}
