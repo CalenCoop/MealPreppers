@@ -1,5 +1,8 @@
 import React from 'react'
 import { useNavigate, useLocation } from 'react-router-dom';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+import '../css/EditPost.css';
 
 
 export default function EditPost() {
@@ -62,50 +65,53 @@ export default function EditPost() {
 
 
     return (
-        <div className="post-form-container">
-            <form onSubmit={handleSubmit}>
-                <h3>Edit Your Post</h3>
-                <input
-                    name="title"
-                    id="title"
-                    placeholder='Meal Name'
-                    onChange={(e) => setTitle(e.target.value)}
-                    value={title}
-                />
-                <textarea
-                    name="comment"
-                    id="comment"
-                    placeholder='Tell us about your meal (ingredients, directions, etc.)'
-                    onChange={(e) => setComment(e.target.value)}
-                    value={comment}
-                />
-                <input type="file"
-                    name="file"
-                    id="file"
-                    onChange={handleFileChange}
-                />
-                {preview && <img src={preview} alt="Image Preview" className="image-preview" />}
+        <div className="flex-container">
+            <div className="post-form-container">
+                <form onSubmit={handleSubmit}>
+                    <h3>Edit Your Post</h3>
+                    <input
+                        name="title"
+                        id="title"
+                        placeholder='Meal Name'
+                        onChange={(e) => setTitle(e.target.value)}
+                        value={title}
+                        />
+                    <ReactQuill
+                        theme='snow'
+                        value={comment}
+                        onChange={setComment}
+                        placeholder='Tell us about your meal (ingredients, directions, etc.)'
+                        className="rich-text-editor"
+                        />
+                    <div className="file-input-container">
+                            <input type= "file"
+                            name="file" 
+                            id="file" 
+                            onChange={handleFileChange}
+                            />
+                            {preview && <img src={preview} alt="Image Preview" className="image-preview" />}
+                        </div>
+                    <input
+                        type="number"
+                        name="estimatedTime"
+                        id="estimatedTime"
+                        placeholder='Estimated Meal Cooking Time'
+                        onChange={(e) => setEstimatedTime(e.target.value)}
+                        value={estimatedTime}
+                        />
+                    <input
+                        type="number"
+                        name="estimatedCost"
+                        id="estimatedCost"
+                        placeholder='Estimated Meal Cost'
+                        onChange={(e) => setEstimatedCost(e.target.value)}
+                        value={estimatedCost}
+                        />
 
-                <input
-                    type="number"
-                    name="estimatedTime"
-                    id="estimatedTime"
-                    placeholder='Estimated Meal Cooking Time'
-                    onChange={(e) => setEstimatedTime(e.target.value)}
-                    value={estimatedTime}
-                />
-                <input
-                    type="number"
-                    name="estimatedCost"
-                    id="estimatedCost"
-                    placeholder='Estimated Meal Cost'
-                    onChange={(e) => setEstimatedCost(e.target.value)}
-                    value={estimatedCost}
-                />
-
-                <button>Edit Meal</button>
-            </form>
-            {error && <p className="error-message">{error}</p>}
-        </div>
+                    <button>Edit Meal</button>
+                </form>
+                {error && <p className="error-message">{error}</p>}
+            </div>
+    </div>
     );
 }
