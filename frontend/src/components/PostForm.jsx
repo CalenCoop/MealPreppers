@@ -81,8 +81,6 @@ function handleFileChange(e){
                         onChange={(e) => setTitle(e.target.value)}
                         value={title}
                         />
-
-
                         <ReactQuill 
                         theme='snow'
                         value={comment}
