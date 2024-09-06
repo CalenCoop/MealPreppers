@@ -26,7 +26,7 @@ export default function SignupForm() {
             return
         }
         try {
-            const response = await axios.post('http://localhost:2501/register', { ...user }, { withCredentials: true });
+            const response = await axios.post('https://mealpreppers.onrender.com/register', { ...user }, { withCredentials: true });
             if (response.status === 200) {
                 localStorage.setItem('currentUser', JSON.stringify(response.data))
                 navigate('/home');

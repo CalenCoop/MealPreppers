@@ -19,7 +19,7 @@ const user = getCurrentUser()
         setLoading(true)
         const fetchPosts = async() => {
             try{
-                const response = await axios.get("http://localhost:2501/home",{
+                const response = await axios.get("https://mealpreppers.onrender.com/home",{
                     withCredentials: true,
                 })
                 setPosts(response.data)
@@ -35,7 +35,7 @@ const user = getCurrentUser()
     async function refetchPosts(){
         setLoading(true)
         try{
-            const response = await axios.get("http://localhost:2501/home",{
+            const response = await axios.get("https://mealpreppers.onrender.com/home",{
                 withCredentials: true,
             })
             setPosts(response.data)

@@ -10,7 +10,7 @@ export default function Following(){
     React.useEffect(()=>{
         const fetchPosts = async() => {
             try{
-                const response = await axios.get("http://localhost:2501/following",{
+                const response = await axios.get("https://mealpreppers.onrender.com/following",{
                     withCredentials: true,
                 })
                 setPosts(response.data)

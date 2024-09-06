@@ -26,7 +26,7 @@ export default function Post({ post, refetchPosts }){
     async function handleLike(e){
         e.preventDefault()
         try{
-            const response = await axios.put(`http://localhost:2501/post/likePost/${post._id}`, {}, 
+            const response = await axios.put(`https://mealpreppers.onrender.com/post/likePost/${post._id}`, {}, 
             { withCredentials: true });
             setLikes(response.data.likes)
             setIsLiked(response.data.likedBy.includes(user._id))
@@ -40,7 +40,7 @@ export default function Post({ post, refetchPosts }){
        e.preventDefault()
         try{
             if(post.user === user._id){
-            const response = await axios.delete(`http://localhost:2501/post/deletePost/${post._id}`,
+            const response = await axios.delete(`https://mealpreppers.onrender.com/post/deletePost/${post._id}`,
                 { withCredentials: true })
                 refetchPosts()
             }
