@@ -1,4 +1,5 @@
 # MealPreppers
+![MealPreppers Video](https://github.com/user-attachments/assets/ecf26a03-2c1a-4213-941c-bc97d759ecc3)
 
 ## Demo
     live demo of app - https://mealpreps.netlify.app/ 
@@ -96,8 +97,9 @@ To set up this project locally for development or testing, follow these steps:
 
 4. **Run the Development Server**: Run the Development Server: Start the development server to preview the app locally. It will be accessible at http://localhost:3000.
     
-backend -   npm start
-frontend -  npm run dev
+- backend
+   - npm start
+- frontend
+  - npm run dev
 
-
-5. **Open in Browser**: Open your web browser and go to [http://localhost:3006](http://localhost:3006) to view the website.
+6. **Open in Browser**: Open your web browser and go to [http://localhost:3006](http://localhost:3006) to view the website.
