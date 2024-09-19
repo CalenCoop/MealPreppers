@@ -1,5 +1,7 @@
 # MealPreppers
-![MealPreppers Video](https://github.com/user-attachments/assets/ecf26a03-2c1a-4213-941c-bc97d759ecc3)
+
+<img src="https://github.com/user-attachments/assets/4b7aea4e-f0e1-42bc-a6c2-b41db643af8c" alt="MealPreppers" width="500" height="300" />
+
 
 ## Demo
     live demo of app - https://mealpreps.netlify.app/ 
