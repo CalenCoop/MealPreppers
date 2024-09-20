@@ -4,72 +4,70 @@
 
 
 ## Demo
-    live demo of app - https://mealpreps.netlify.app/ 
+live demo of app - https://mealpreps.netlify.app/ 
     
-    Demo app login details:
-        Username: TestApp
-        Password: Testing123
+Demo app login details:
+        <p>Username: TestApp</p> 
+        <p>Password: Testing123</p>
 
 ## Description
 
-    MealPreppers is a social media platform for food enthusiasts to share their meal prep ideas, recipes, and tips. 
-    Users can create posts, upload images, and connect with others who share their passion for meal prepping. 
-    The app offers an interactive and engaging way to discover new recipes, track meal costs, and estimate cooking times.
+MealPreppers is a social media platform for food enthusiasts to share their meal prep ideas, recipes, and tips. Users can create posts, upload images, and connect with others who share their passion for meal prepping. The app offers an interactive and engaging way to discover new recipes, track meal costs, and estimate cooking times.
 
 ## Features
-    - Rich Text Editor: Users can format their recipes with headings, lists, links, and more.
+ - Rich Text Editor: Users can format their recipes with headings, lists, links, and more.
 
-    - Image Upload: Upload images to visually showcase your meal preps.
+- Image Upload: Upload images to visually showcase your meal preps.
 
-    - Like and Follow System: Interact with other users by liking their posts and following their profiles.
+- Like and Follow System: Interact with other users by liking their posts and following their profiles.
 
-    - Comment Section: Engage with other users by commenting on their posts.
+- Comment Section: Engage with other users by commenting on their posts.
 
-    - Profile Page: Customize your profile with a profile picture and track your followers.
+- Profile Page: Customize your profile with a profile picture and track your followers.
 
-    - Explore Page: Discover new recipes from other users in the community.
+- Explore Page: Discover new recipes from other users in the community.
     
 ## Technologies Used
-    - React
+- React
 
-    - JavaScript
+- JavaScript
 
-    - Node.js & Express
+- Node.js & Express
 
-    - MongoDB
+- MongoDB
 
-    - Cloudinary
+- Cloudinary
 
-    - CSS
+- CSS
 
 ## Lessons Learned
-    During the development of this app, several key concepts were reinforced and new skills were acquired:
+During the development of this app, several key concepts were reinforced and new skills were acquired:
 
-    - Full-Stack Development: Building a complete application from frontend to backend.
+- Full-Stack Development: Building a complete application from frontend to backend.
 
-    - RESTful API Design: Creating and consuming APIs to manage data flow between frontend and backend.
+- RESTful API Design: Creating and consuming APIs to manage data flow between frontend and backend.
 
-    - State Management & Hooks in React: Efficiently managing state and side effects across various components.
+- State Management & Hooks in React: Efficiently managing state and side effects across various components.
    
-    - User Authentication: Securing routes and data with JWT-based authentication.
+- User Authentication: Securing routes and data with JWT-based authentication.
 
-    - Form Handling: Managing file uploads and form submissions in React.
+- Form Handling: Managing file uploads and form submissions in React.
 
-    - CSS Grid Layout: Implementing complex layouts with CSS Grid for better user experience.
+- CSS Grid Layout: Implementing complex layouts with CSS Grid for better user experience.
 
 
 ## Future Improvements
-    While the app is functional, there are several areas that could be enhanced:
+While the app is functional, there are several areas that could be enhanced:
 
-    -Add sorting functionality of meals (ex - sort by breakfast, lunch, dinner. food types - chicken, vegan, etc.)
+-Add sorting functionality of meals (ex - sort by breakfast, lunch, dinner. food types - chicken, vegan, etc.)
 
-    - Mobile Optimization: Improve the app's responsiveness for a seamless experience on mobile devices.
+- Mobile Optimization: Improve the app's responsiveness for a seamless experience on mobile devices.
 
-    - Accessibility: Enhance the app’s accessibility for users with disabilities.
+- Accessibility: Enhance the app’s accessibility for users with disabilities.
 
-    - Improved Notifications: Add real-time notifications for likes, comments, and follows.
+- Improved Notifications: Add real-time notifications for likes, comments, and follows.
 
-    - Dark Mode: Implement a dark mode for better user experience during night time usage.
+- Dark Mode: Implement a dark mode for better user experience during night time usage.
 
 
 ## Installation
